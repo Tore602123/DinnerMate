@@ -1,0 +1,2 @@
+# DinnerMate
+Small school project
