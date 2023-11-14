@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>DinnerMate</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<main>
+			<section class="chatbot-container">
+				<div class="chatbot-header">
+					<img src="images/Logo2.png" class="logo">
+					<h1>DinnerMate</h1>
+					<p class="supportId">User ID: TEST</p>
+					<button class="clear-btn" id="clear-btn">start over</button>
+				</div>
+				<div class="chatbot-conversation-container" id="chatbot-conversation">
+					<div class="speech speech-ai">
+						I'm here to help you make dinner plans and find a recipe!
+					</div>
+				</div>
+				<form id="form" class="chatbot-input-container">
+					<input name="likes" type="text" id="likes-input" placeholder="Likes">
+					<input name="dislikes" type="text" id="dislikes-input" placeholder="Dislikes">
+					<input name="allergies" type="text" id="allergies-input" placeholder="Allergies">
+					<input name="number-of-people" type="number" id="number-of-people-input" placeholder="Number of People" min="1">
+					<button id="submit-btn" class="submit-btn">
+						<img 
+							src="images/send-btn-icon.png" 
+							class="send-btn-icon"
+						>
+					</button>
+				</form>
+			</section>
+		</main>
+		<script type="module" src="index.js"></script>
+	</body>
+
+</html>

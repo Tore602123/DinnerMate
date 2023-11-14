@@ -1,0 +1,185 @@
+:root {
+    --border-rad-lg: 15px;
+    --medium-light-text: #586e88;
+    --light-text: #fcfcfc;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main {    
+    background-color: rgb(27, 29, 34);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* chatbot elements */
+
+.chatbot-container {
+    background-color: #16202C;
+    width: 500px;
+    min-height: 600px;
+    border-radius: var(--border-rad-lg);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;  
+}
+
+.chatbot-container > * {
+    padding: .5em;   
+}
+/* Style for input fields to prevent them from jamming up */
+.chatbot-input-container input[type="text"] {
+    margin-right: 10px; /* Add space between inputs */
+    flex: 1; /* Flex grow to use available space */
+}
+
+.chatbot-header > * {
+    margin: .11em;
+}
+
+.logo {
+    grid-area: logo;
+    width: 45px;
+}
+
+.supportId {
+    font-size: 10px;
+    grid-area: supportId;
+    text-align: center;
+}
+
+.clear-btn {
+    grid-area: clear-btn;
+    height: 20px;
+    padding: 0;
+    width: 80%;
+    color: var(--medium-light-text);
+    font-size: 12px;
+    margin: 0 auto; 
+}
+
+.clear-btn:hover {
+    border: 1px solid #24976f;
+    color: #24976f;
+    cursor: pointer;
+}
+
+.chatbot-conversation-container {
+    max-height: 500px;
+    min-height: 500px;
+    overflow-y: scroll;
+    margin: 1em 0;
+}
+
+/* stop ugly scroll bar on some browsers */
+.chatbot-conversation-container::-webkit-scrollbar{
+    display: none;
+}
+
+.chatbot-conversation-container::-moz-scrollbar{
+    display: none;
+}
+
+.speech {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 260px; 
+    color: var(--light-text);
+    min-width: 100%;
+    border-radius: var(--border-rad-lg); 
+}
+
+.speech:first-child {
+    margin-top: 0;
+}
+
+.speech-ai {
+	background: #253b4b;
+    border-top-left-radius: 0; 
+}
+
+.speech-human {
+	background: #24976f;
+    border-top-right-radius: 0; 
+}
+
+.chatbot-input-container {
+    display: flex;
+    flex-wrap: wrap; /* Add this to allow wrapping of items */
+    justify-content: space-between; /* Add this for spacing between items */
+    gap: 10px; /* Adds space between flex items */
+}
+
+input[type="text"], input[type="number"], button {
+    background-color: transparent;
+    border: 1px solid var(--medium-light-text);
+    border-radius: 15px;
+    padding: 1em;
+    margin-bottom: 10px; /* Space at the bottom */
+}
+
+/* Specific styles for text and number input fields */
+input[type="text"], input[type="number"] {
+    color: #fcfcfc;
+    flex: 1 1 100px; /* Adjust flex-basis as per your requirement */
+    min-width: 120px; /* Minimum width of input fields */
+    max-width: calc(50% - 20px); /* Adjust max width to fit two items in a row */
+}
+
+.submit-btn {
+    flex: 0 0 auto; /* Do not grow, do not shrink, auto basis */
+    padding: 1em;
+    margin-left: auto; /* Aligns the button to the right */
+}
+
+.send-btn-icon {
+    width: 20px;
+    display: block;
+}
+
+/* text */
+
+h1 {
+    font-size: 15px;
+    color: var(--light-text);
+    grid-area: title;
+}
+
+h2, p {
+    color: var(--medium-light-text); 
+}
+
+h2 {
+    font-size: 11px;
+    font-weight: 700;
+    grid-area: subtitle;
+    text-transform: uppercase;
+}
+
+/* The cursor */
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-cursor::after {
+    content: "|";
+    font-weight: 700;
+    display: inline-block;
+    animation: cursor-blink .5s steps(2) infinite;
+}
