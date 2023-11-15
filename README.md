@@ -12,7 +12,7 @@ DinnerMate is a small school project designed to assist users in meal planning. 
 
 1. **Clone the Project**:
    ```bash
-   git clone [https://github.com/Tore602123/DinnerMate.git]
+   git clone https://github.com/Tore602123/DinnerMate.git
    
 2. Navigate to the project directory: 
 ```cd DinnerMate```
