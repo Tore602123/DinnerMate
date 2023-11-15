@@ -1,7 +1,6 @@
 {
-  "name": "project",
+  "name": "dinnermate",
   "dependencies": {
-    "firebase": "^9.20.0",
     "openai": "3.2.1"
   },
   "scripts": {
