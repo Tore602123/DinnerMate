@@ -1,17 +1,38 @@
 # DinnerMate
-Small school project
 
-To run the project
-1. Download node.js
-2. Clone the project.
-3. In the folder run    npm install vite
-4. Create the env.js file containing the following code
+## Overview
+DinnerMate is a small school project designed to assist users in meal planning. It leverages a generative AI model to suggest personalized recipes based on user preferences.
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+
+### Installation
+
+1. **Clone the Project**:
+   ```bash
+   git clone [Your Repository URL]
+   
+2. Navigate to the project directory: 
+```cd DinnerMate```
+
+4. Install Vite: 
+```npm install vite```
+
+6. Create an `env.js` file in the project root with the following content:
+```javascript
 export const process = {
-    env: {
-        OPENAI_API_KEY: "sk-f7XhdfpcxcevUDkiC3tOT3BlbkFJphiMkjaxLgWA1CZVSX  ne "
-    }
-}
-5. Run the webapp with     npm start
-6. Go to http://localhost:5173/ or your configured standard port
+  env: {
+    OPENAI_API_KEY: "Your-OpenAI-API-Key"
+  }
+};
+```
+## Running the Application
+Start the web app: ```npm start```
 
-7. Try the different inputs, click the submit button and wait for response
+Access the application in your web browser:
+Go to - http://localhost:5173/ or your configured port.
+
+Try different inputs related to meal preferences.
+Click the submit button and wait for the AI's response.
